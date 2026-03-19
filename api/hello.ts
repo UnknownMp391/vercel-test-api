@@ -8,7 +8,8 @@ export default async function handler(request: Request): Promise<Response> {
   
   return new Response(
     JSON.stringify({
-      message: `Hello ${name}!`, 
+      message: `Hello ${name}!`,
+      name
     }),
     {
       status: 200,
