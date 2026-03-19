@@ -7,14 +7,12 @@ export default async function handler(request: Request): Promise<Response> {
   const name = url.searchParams.get('name') || 'World';
   
   return new Response(
-    JSON.stringify({
-      message: `Hello ${name}!`,
-      name
-    }),
+    `这是一条来自 Vercel Edge function 的响应, name: ${name}`,
     {
       status: 200,
       headers: {
-        'Content-Type': 'application/json',
+        'Content-Type': 'text/plain; charset=utf-8',
+        
       }
     }
   );
