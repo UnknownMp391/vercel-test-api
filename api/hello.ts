@@ -8,8 +8,7 @@ export default async function handler(request: Request): Promise<Response> {
   
   return new Response(
     JSON.stringify({
-      message: `Hello ${name}!`,
-      timestamp: new Date().toISOString(),
+      message: `Hello ${name}!`, 
     }),
     {
       status: 200,
