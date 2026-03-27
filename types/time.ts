@@ -1,0 +1,23 @@
+import z from "zod";
+
+export const TimeSchema = z.object({
+  year: z.number(),
+  month: z.number(),
+  date: z.number()
+})
+export type Time = z.infer<typeof TimeSchema>
+
+export const TimeMap = {
+  "jan": 1,
+  "feb": 2,
+  "mar": 3,
+  "apr": 4,
+  "may": 5,
+  "jun": 6,
+  "jul": 7,
+  "aug": 8,
+  "sept": 9,
+  "oct": 10,
+  "nov": 11,
+  "dec": 12
+}
